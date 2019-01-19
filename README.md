@@ -23,35 +23,24 @@ Modify the'nv_dispi.inf'
 ----------------------------------------
 Open it with Notepad++
 ----------------------------------------
-Delete the following
+Delete the lines containing
 ----------------------------------------
-Line 383
-----------------------------------------
-Line 512
-----------------------------------------
-Line 647
-----------------------------------------
-Line 18226
+PCI\VEN_10DE&DEV_1C07
 ----------------------------------------
 Save it
 ----------------------------------------
 Open'nvaci.inf'
-Add the following code below line 499
+Add the following code below the first two lines that ends in 12431025
 ----------------------------------------
 %NVIDIA_DEV.1C07%           = Section066, PCI\VEN_10DE&DEV_1C07 
 ----------------------------------------
-Add the following code below line 786
-----------------------------------------
-%NVIDIA_DEV.1C07%           = Section066, PCI\VEN_10DE&DEV_1C07  
-----------------------------------------
-Add the following code below line 1073
+Add the following code below the third line that ends in 12431025
 ----------------------------------------
 %NVIDIA_DEV.1C07%           = Section065, PCI\VEN_10DE&DEV_1C07  
 ----------------------------------------
-Add the following code below line 12496
+Add the following code below line last line that ends in "GTX 1070""
 ----------------------------------------
-NVIDIA_DEV.1C07 = "NVIDIA P106-100"
+NVIDIA_DEV.1C07 = "NVIDIA GeForce GTX 1060 6G"
 ----------------------------------------
 Save it
 -----------------------------------------
-Replace C:\XXX\416.34-desktop-win10-64bit-international-whql\Display.Driver (change'C'to the disk character you unzipped)with 'nv_dispi.inf' 'nvaci.inf'
