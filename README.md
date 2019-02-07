@@ -23,8 +23,8 @@ find all lines with 1C07 and change all Section### to match 1C06 Section###'s
 ----------------------------------------
 i also like to change the following line so that device manager will say that it is a gaming card.
 from 
-NVIDIA_DEV.1C07 = "NVIDIA P106-100"
-to
+NVIDIA_DEV.1C07 = "NVIDIA P106-100"\
+to\
 NVIDIA_DEV.1C07 = "NVIDIA GeForce GTX 1060 6G"
 -----------------------------------------
 Save it
