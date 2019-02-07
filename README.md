@@ -1,21 +1,17 @@
 # NVIDIA_P106
 NVIDIA P106 GPUs PLAY GAME
+(Tested on Gigabyte 6GB version)
 ----------------------------------------
-----------------------------------------
-----------------------------------------
-Thanks for help！
-----------------------------------------
-DWITG
-----------------------------------------
-3440
-----------------------------------------
-萌新小姐姐的施工队
-----------------------------------------
-zpl8150
-----------------------------------------
-刘sir
-----------------------------------------
-----------------------------------------
+open administrative command line
+bcdedit /set {current} testsigning on
+bcdedit /set {current} nointegritychecks on
+reboot
+
+after you are done you can turn off testsigning so steam games(anti-cheat detection) will work again.
+bcdedit /set {current} testsigning off
+
+use DDU to uninstall (safe mode unnecessary) 
+https://www.wagnardsoft.com/
 ----------------------------------------
 METHOD
 ----------------------------------------
@@ -23,23 +19,12 @@ Modify the'nv_dispi.inf'
 ----------------------------------------
 Open it with Notepad++
 ----------------------------------------
-Delete the lines containing
+find all lines with 1C07 and change all Section### to match 1C06 Section###'s
 ----------------------------------------
-PCI\VEN_10DE&DEV_1C07
-----------------------------------------
-Save it
-----------------------------------------
-Open'nvaci.inf'
-Add the following code below the first two lines that ends in 12431025
-----------------------------------------
-%NVIDIA_DEV.1C07%           = Section066, PCI\VEN_10DE&DEV_1C07 
-----------------------------------------
-Add the following code below the third line that ends in 12431025
-----------------------------------------
-%NVIDIA_DEV.1C07%           = Section065, PCI\VEN_10DE&DEV_1C07  
-----------------------------------------
-Add the following code below line last line that ends in "GTX 1070""
-----------------------------------------
+i also like to change the following line so that device manager will say that it is a gaming card.
+from 
+NVIDIA_DEV.1C07 = "NVIDIA P106-100"
+to
 NVIDIA_DEV.1C07 = "NVIDIA GeForce GTX 1060 6G"
 ----------------------------------------
 Save it
